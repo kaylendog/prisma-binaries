@@ -1,4 +1,4 @@
-# prisma-binaries-docker
+# prisma-binaries-docker [![Build](https://github.com/kaylendog/prisma-binaries/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/kaylendog/prisma-binaries/actions/workflows/build.yml)
 
 Provides [Prisma](https://prisma.io) binaries for `aarch64-unknown-linux-musl` platforms.
 
