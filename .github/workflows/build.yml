@@ -27,7 +27,7 @@ jobs:
               with:
                   # list of Docker images to use as base name for tags
                   images: |
-                      skyefuzz/nginx-rtmp
+                      skyefuzz/prisma-binaries
                   # generate Docker tags based on the following events/attributes
                   tags: |
                       type=semver,pattern={{version}}
@@ -49,5 +49,5 @@ jobs:
                   push: ${{ github.event_name != 'pull_request' }}
                   tags: ${{ steps.meta.outputs.tags }}
                   labels: ${{ steps.meta.outputs.labels }}
-                  cache-from: type=gha
-                  cache-to: type=gha,mode=max
+                  cache-from: type=registry,ref=skyefuzz/prisma-binaries:latest
+                  cache-to: type=inline
