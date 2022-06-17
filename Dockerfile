@@ -21,7 +21,7 @@ FROM scratch
 LABEL org.opencontainers.image.authors="Kaylen Dart <actuallyori@gmail.com>"
 # copy libraries to /
 COPY --from=builder \ 
-	/build/prisma-engines/query-engine \ 
-	/build/prisma-engines/migration-engine \
-	/build/prisma-engines/introspection-engine \ 
-	/build/prisma-engines/prisma-fmt /
+	/build/prisma-engines/target/release/query-engine \ 
+	/build/prisma-engines/target/release/migration-engine \
+	/build/prisma-engines/target/release/introspection-engine \ 
+	/build/prisma-engines/target/release/prisma-fmt /
